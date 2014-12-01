@@ -1,0 +1,15 @@
+tail: PORT=80: No such file or directory
+tail: --adapter: No such file or directory
+tail: slack: No such file or directory
+
+==> bin/hubot <==
+
+set -e
+
+npm install
+export PATH="node_modules/.bin:node_modules/hubot/node_modules/.bin:$PATH"
+export HUBOT_SLACK_TOKEN=rUOUj2ZsbecuiDvmjLhulmrV
+export HUBOT_SLACK_TEAM=hpp-hiiir
+export HUBOT_SLACK_BOTNAME=slackbot
+
+exec node_modules/.bin/hubot "$@"
